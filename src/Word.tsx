@@ -9,7 +9,7 @@ export default function Word({ guessedLetters, wordToGuess, reveal = false}:Word
     
   return (
     <div style={{ display: "flex", gap: ".6rem", fontSize: "6rem", fontWeight: "bold", textTransform: "uppercase", fontFamily:"monospace"}}>{wordToGuess.split("").map((letter, index) => (
-        <span style={{borderBottom:".1em solid white"}}> 
+        <span style={{borderBottom:".1em solid white"}} key={index}> 
             <span 
             style={{
                 visibility: guessedLetters.includes(letter) || reveal
